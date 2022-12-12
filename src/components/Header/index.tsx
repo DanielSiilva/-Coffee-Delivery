@@ -1,4 +1,4 @@
-import { MapPin } from 'phosphor-react'
+import {MapPin, ShoppingCart} from 'phosphor-react'
 import Logo from '../../assets/Logo.svg'
 
 import { HeaderContainer } from "./styled"
@@ -14,10 +14,14 @@ export function Header () {
 
                 <section>
                     <div>
-                        <MapPin size={32} />
-                        <span> Porto Alegre, RS</span>
+                        <span> 
+                            <MapPin  size={22}/>
+                            Porto Alegre, RS
+                        </span>
                     </div>
-                    <button> Carrinho</button>
+                    <button>
+                        <ShoppingCart size={22}/>
+                    </button>
                 </section>
             </nav>
         </HeaderContainer>
