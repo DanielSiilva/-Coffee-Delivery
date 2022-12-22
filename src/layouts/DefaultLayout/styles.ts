@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 
 export const LayoutContainer = styled.div`
-  max-width: 74rem;
-  padding: 1rem 2.5rem;
+  max-width: 100vw;
+  
   margin: 0 auto;
 
  

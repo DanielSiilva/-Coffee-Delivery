@@ -1,52 +1,70 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 
 export const HeaderContainer = styled.header `
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
     height: 15vh;
+    padding: 2rem 6rem;
 
 
-    nav{
+
+    
+
+    div{
+        width: 100%;
+        padding: 0.313rem;
+
+
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        img{
-            width: 4rem;
-        }
+  
     }
+`
 
-    section{
-        display: flex;
-        gap: 1rem;
+export const NavHeader = styled.nav`
+    display: flex;
+    gap: 0.625rem;
+
+`
+
+interface ButtonHeaderProps{
+    variant: 'purple-dark' | 'yellow' 
+}
+
+export const ButtonHeader = styled.button<ButtonHeaderProps>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size:0.875rem;
+    font-weight: 400;
+    font-family: 'Roboto';
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    
+    ${(props) =>
+        props.variant === 'purple-dark' &&
+    css`
+        color: ${(props)=> props.theme['purple']};
+        background: ${(props)=> props.theme['purple-light']};
+    `}
+
+    ${(props) =>
+        props.variant === 'yellow' &&
+    css`
+        color: ${(props)=> props.theme['yellow-dark']};
+        background: ${(props)=> props.theme['yellow-light']};
+
+    `}
 
 
-        div{
-            padding: 0.5rem;
-            background: ${(props)=> props.theme['purple-light']};
-            color: ${(props)=> props.theme['purple-dark']};
-            border-radius: 8px;
-            font-weight: 400;
-
-            span{
-                display: flex;
-                align-items: center;
-
-
-                svg {
-                    color: ${(props) => props.theme['purple-dark']};
-                }
-            }
-            
-        }
-
-
-        button{
-            background-color: ${(props)=> props.theme['yellow-light']};
-            border: 0px;
-            width: 3rem;
-            border-radius: 8px;
-        }
-    }
 
 `
