@@ -3,24 +3,22 @@ import styled from "styled-components";
 import BackgroundHome from '../../assets/Background-home.svg'
 
 export const HomeContainer = styled.div`
-    height: 100vh;
+
 
     display: flex;
     justify-content: center;
     flex-direction: column;
 
+    
 `
 
 export const HomeIntroduction = styled.section`
 
     background-image: url(${BackgroundHome});
 
-    height: 80vh;
-    margin-top: 10rem;
+    height: 70vh;
     
 
-    
-    
     display: flex;
     justify-content: center;
     
@@ -109,6 +107,8 @@ export const HomeCoffeeLIst = styled.div`
     margin-top: 2rem;
     height: auto;
     padding: 0.5rem 6rem;
+
+    
 `
 
 export const TitleFilter = styled.section`
@@ -148,8 +148,12 @@ export const ButtonTag = styled.button`
 `
 
 export const HomeListCoffe = styled.section`
-    border: 2px solid black;
     padding: 1rem 1rem;
+    margin-top: 2rem;
 
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 3rem 2rem;
     
 `
